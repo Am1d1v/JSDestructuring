@@ -28,4 +28,11 @@ console.log(value1, value2); */
 // console.log(categoryOne, categoryThree);
 
 const [appetizer, mainMenu] = restaurantData.orderFood(1, 1);
-console.log(appetizer, mainMenu);
+
+
+const nestedArray = [111, 222, [333, 444, [555, 666]]];
+// const [firstEl, ,thirdEl] = nestedArray;
+// const [firstNestedEl, ,thirdNestedEl] = thirdEl
+// console.log(firstNestedEl, thirdNestedEl);
+const [firstEl, ,[thirdEl, , [ ,fifthEl]]] = nestedArray;
+console.log(firstEl, thirdEl, fifthEl);
