@@ -27,12 +27,18 @@ console.log(value1, value2); */
 // const [categoryOne, ,categoryThree] = restaurantData.categories;
 // console.log(categoryOne, categoryThree);
 
-const [appetizer, mainMenu] = restaurantData.orderFood(1, 1);
+//const [appetizer, mainMenu] = restaurantData.orderFood(1, 1);
 
 
-const nestedArray = [111, 222, [333, 444, [555, 666]]];
+// Nested Destructuring
+//const nestedArray = [111, 222, [333, 444, [555, 666]]];
 // const [firstEl, ,thirdEl] = nestedArray;
 // const [firstNestedEl, ,thirdNestedEl] = thirdEl
 // console.log(firstNestedEl, thirdNestedEl);
-const [firstEl, ,[thirdEl, , [ ,fifthEl]]] = nestedArray;
-console.log(firstEl, thirdEl, fifthEl);
+//const [firstEl, ,[thirdEl, , [ ,fifthEl]]] = nestedArray;
+
+
+// Default Values
+const unknownArray = [3, 5];
+const [firstItem = 10, secondItem = 10, thirdItem = 10] = unknownArray;
+console.log(firstItem, secondItem, thirdItem);
