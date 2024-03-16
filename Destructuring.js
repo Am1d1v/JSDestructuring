@@ -4,16 +4,16 @@
     // Array Destructuring
 
 // Initial Restaurant Data
-const restaurantData = {
-    name: 'Banzai',
-    location: '108 Wood Road',
-    categories: ['Japanese', 'Sushi', 'Vegeterian'],
-    mainMenu: ['Sushi', 'Ramen'],
-    appetizers: ['Sushi rice', 'Tempura', 'Salad'],
-    orderFood: function(appetizersIndex, mainMenuIndex){
-        return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]]
-    }
-}
+// const restaurantData = {
+//     name: 'Banzai',
+//     location: '108 Wood Road',
+//     categories: ['Japanese', 'Sushi', 'Vegeterian'],
+//     mainMenu: ['Sushi', 'Ramen'],
+//     appetizers: ['Sushi rice', 'Tempura', 'Salad'],
+//     orderFood: function(appetizersIndex, mainMenuIndex){
+//         return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]]
+//     }
+// }
 
 /* const arr = [1, 2, 3];
 // const value1 = arr[0];
@@ -39,6 +39,46 @@ console.log(value1, value2); */
 
 
 // Default Values
-const unknownArray = [3, 5];
-const [firstItem = 10, secondItem = 10, thirdItem = 10] = unknownArray;
-console.log(firstItem, secondItem, thirdItem);
+// const unknownArray = [3, 5];
+// const [firstItem = 10, secondItem = 10, thirdItem = 10] = unknownArray;
+// console.log(firstItem, secondItem, thirdItem);
+
+
+
+
+    // Object Destructuring
+
+//Initial Restaurant Data
+const restaurantData = {
+    name: 'Banzai',
+    location: '108 Wood Road',
+    categories: ['Japanese', 'Sushi', 'Vegeterian'],
+    mainMenu: ['Sushi', 'Ramen'],
+    appetizers: ['Sushi rice', 'Tempura', 'Salad'],
+    workingHours: {
+        wedndesday: {
+            open: 10,
+            close: 22
+        },
+        thursday: {
+            open: 10,
+            close: 22
+        },
+        friday: {
+            open: 10,
+            close: 22
+        },
+        sunday: {
+            open: 12,
+            close: 20
+        }
+    },
+    orderFood: function(appetizersIndex, mainMenuIndex){
+        return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]]
+    }
+}    
+
+const {wedndesday, friday, sunday} = restaurantData.workingHours;
+console.log(sunday);
+    
+
